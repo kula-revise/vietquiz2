@@ -152,10 +152,10 @@
 body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:not(.dark) .section-name, body:not(.dark) .section-btn .section-count { color: #12150f !important; }
 
 /* kdone completion pop */
-.kdone-back { position: fixed; inset: 0; background: var(--scrim, rgba(27,42,51,0.5)); display: flex; align-items: center; justify-content: center; padding: 1.2rem; z-index: 90; }
-.kdone { background: var(--paper, var(--sheet, var(--slab, #ffffff))); color: var(--ink, #1a1a1a); border: 1px solid var(--hair, rgba(128,128,128,0.28)); max-width: 26rem; width: 100%; padding: 1.4rem 1.3rem; text-align: center; }
-.kdone-label { font-family: var(--mono, ui-monospace, 'Cascadia Code', Consolas, monospace); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink, #1a1a1a); font-weight: 600; margin-bottom: 0.5rem; opacity: 0.75; }
-.kdone p { font-size: 0.95rem; line-height: 1.6; color: var(--ink, #1a1a1a); margin: 0.5rem 0 1.1rem; }
+.kdone-back { position: fixed; inset: 0; background: rgba(8,16,28,0.72); display: flex; align-items: center; justify-content: center; padding: 1.2rem; z-index: 60; }
+.kdone { background: var(--sheet, var(--slab, var(--paper, #ffffff))); color: var(--ink, #1a1a1a); border-top: 3px solid var(--flame, var(--spray, var(--a2, var(--a1, #888888)))); max-width: 24rem; width: 100%; padding: 1.6rem 1.5rem 1.5rem; text-align: center; }
+.kdone-label { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--leaf, var(--spray, var(--a2, var(--a1, #888888)))); font-weight: 600; margin-bottom: 0.7rem; }
+.kdone p { margin: 0 0 1.1rem; color: var(--ink, #1a1a1a); }
 .kdone .primary-btn { display: inline-flex; width: auto; }
 </style>
 </head>
@@ -289,7 +289,7 @@ const QUESTIONS = [
       "That the Buddhist majority had already backed him"
     ],
     "correct": 0,
-    "explanation": "That it could not have survived a vote. You are reading backwards from an action to what it reveals, which is the move the essay wants. A government that needs the election cancelled is not resting on consent."
+    "explanation": "That it could not have survived a vote. You are reading backwards from an action to what it reveals, which is the move the essay wants. A government that needs the election cancelled is not resting on the people’s agreement."
   },
   {
     "id": 4,
@@ -304,7 +304,7 @@ const QUESTIONS = [
       "He resigned quietly rather than being overthrown at all"
     ],
     "correct": 0,
-    "explanation": "His own generals did it, in November 1963. The United States knew and did not stop it, which is not the same as doing it. You want that distinction because it changes who was in control."
+    "explanation": "His own generals did it, in November 1963. The United States knew and did not stop it, which is not the same as doing it. You want that difference because it changes who was in control."
   },
   {
     "id": 5,
@@ -364,7 +364,7 @@ const QUESTIONS = [
       "April 1970"
     ],
     "correct": 0,
-    "explanation": "March 1965, the same month the first marines landed at Da Nang. Those two together mark the start of the American war. You can date the escalation from them."
+    "explanation": "March 1965, the same month the first marines landed at Da Nang. Those two together mark the start of the American war. You can date the build-up from them."
   },
   {
     "id": 9,
@@ -746,7 +746,7 @@ function showReview(){
 buildMenu();
 })();
 </script>
-<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing The Vietnam War. Come back here whenever you need to revise for a test or exam.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
+<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing Vietnam. Come back here whenever you need to revise for a test or exam.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
 <script>(function(){document.addEventListener("click",function(e){var m=document.getElementById("kdone-modal");if(!m||!e.target.closest)return;if(e.target.closest("#kdone-btn")){m.classList.remove("hidden");}else if(e.target.closest("#kdone-close")){m.classList.add("hidden");}});})();</script>
 </body>
 </html>
