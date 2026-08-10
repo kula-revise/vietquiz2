@@ -150,6 +150,13 @@
 /* vi-chkpick */
 .primary-btn, .primary-btn .btn-num, .primary-btn .btn-title, .primary-btn .btn-sub, .primary-btn .btn-arrow { color: #12150f !important; }
 body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:not(.dark) .section-name, body:not(.dark) .section-btn .section-count { color: #12150f !important; }
+
+/* kdone completion pop */
+.kdone-back { position: fixed; inset: 0; background: var(--scrim, rgba(27,42,51,0.5)); display: flex; align-items: center; justify-content: center; padding: 1.2rem; z-index: 90; }
+.kdone { background: var(--paper, var(--sheet, var(--slab, #ffffff))); color: var(--ink, #1a1a1a); border: 1px solid var(--hair, rgba(128,128,128,0.28)); max-width: 26rem; width: 100%; padding: 1.4rem 1.3rem; text-align: center; }
+.kdone-label { font-family: var(--mono, ui-monospace, 'Cascadia Code', Consolas, monospace); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink, #1a1a1a); font-weight: 600; margin-bottom: 0.5rem; opacity: 0.75; }
+.kdone p { font-size: 0.95rem; line-height: 1.6; color: var(--ink, #1a1a1a); margin: 0.5rem 0 1.1rem; }
+.kdone .primary-btn { display: inline-flex; width: auto; }
 </style>
 </head>
 <body>
@@ -225,6 +232,7 @@ body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:n
     <div class="breakdown"><div class="breakdown-label">By section</div><div id="breakdown-rows"></div></div>
     <div><div class="review-all-label">Every question</div><div id="review-cards"></div></div>
     <div class="review-actions">
+      <button class="primary-btn" id="kdone-btn"><span class="btn-txt"><span class="btn-title">Finish</span></span><span class="btn-arrow">&rarr;</span></button>
       <button class="primary-btn" id="restart-btn"><span class="btn-txt"><span class="btn-title">Return to menu</span><span class="btn-sub">Try another section or retake the full test</span></span><span class="btn-arrow">&#8635;</span></button>
     </div>
   </div>
@@ -738,5 +746,7 @@ function showReview(){
 buildMenu();
 })();
 </script>
+<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing The Vietnam War. Come back here whenever you need to revise for a test or exam.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
+<script>(function(){document.addEventListener("click",function(e){var m=document.getElementById("kdone-modal");if(!m||!e.target.closest)return;if(e.target.closest("#kdone-btn")){m.classList.remove("hidden");}else if(e.target.closest("#kdone-close")){m.classList.add("hidden");}});})();</script>
 </body>
 </html>
