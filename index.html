@@ -147,8 +147,6 @@
   .hidden { display: none !important; }
 
 #kula-mode-toggle, .mode-toggle { min-height: 44px !important; padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; box-sizing: border-box !important; }
-/* vi-chkpick */
-.primary-btn, .primary-btn .btn-num, .primary-btn .btn-title, .primary-btn .btn-sub, .primary-btn .btn-arrow { color: #12150f !important; }
 body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:not(.dark) .section-name, body:not(.dark) .section-btn .section-count { color: #12150f !important; }
 
 /* kdone completion pop */
@@ -746,7 +744,7 @@ function showReview(){
 buildMenu();
 })();
 </script>
-<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing Vietnam. Come back here whenever you need to revise for a test or exam.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
+<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing Vietnam. Come back here whenever you have a test or exam, or just need to consolidate your work.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
 <script>(function(){document.addEventListener("click",function(e){var m=document.getElementById("kdone-modal");if(!m||!e.target.closest)return;if(e.target.closest("#kdone-btn")){m.classList.remove("hidden");}else if(e.target.closest("#kdone-close")){m.classList.add("hidden");}});})();</script>
 </body>
 </html>
