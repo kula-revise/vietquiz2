@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What Stuck | The extension of the Cold War: Vietnam | Kula Revise</title>
 <style>
-  :root{--sand:#12150F;--paper:#191D14;--cut:#20261A;--ink:#ECEBDB;--a1:#94A878;--a2:#45A9AA;--copper:var(--a1);--malachite:var(--a2);--clay:#94A878;--fade:#8E8D7A;--ink-c:236,235,219;--a1-c:148,168,120;--a2-c:69,169,170;--opt-correct-bg:#17352A;--opt-wrong-bg:#2E2420;--chip-recall-bg:#262019;--chip-recall-fg:#C9A97F;--chip-understand-bg:#1E2A22;--chip-understand-fg:#8FB89A;--btn-sub-c:#8E8D7A;--on-ink:#12150F;--ink-hover:#E4E3D2;--a2-hover:#3A9091;--serif:Georgia, 'Times New Roman', serif;--sans:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;}
-  body.bright{--sand:#EFE9DC;--paper:#FAF6EC;--cut:#FFFDF6;--ink:#23302E;--a1:#6E7F5C;--a2:#1E6A6B;--copper:var(--a1);--malachite:var(--a2);--clay:#5F6B52;--fade:#7C7B6D;--ink-c:27,42,51;--a1-c:110,127,92;--a2-c:30,106,107;--opt-correct-bg:#E2EDE4;--opt-wrong-bg:#F2DDD3;--chip-recall-bg:#E7D6C4;--chip-recall-fg:#7B3F1C;--chip-understand-bg:#D6E3DB;--chip-understand-fg:#1B5445;--btn-sub-c:#cbb9a0;--on-ink:#F4EADA;--ink-hover:#12202a;--a2-hover:#164C3F;}
+  :root{--sand:#090B11;--paper:#141822;--cut:#1D2330;--ink:#EDF1F8;--a1:#B79BFF;--a2:#4CC9F0;--copper:var(--a1);--malachite:var(--a2);--clay:#B79BFF;--fade:#8E9BAE;--ink-c:237,241,248;--a1-c:183,155,255;--a2-c:76,201,240;--opt-correct-bg:#17352A;--opt-wrong-bg:#2A2140;--chip-recall-bg:#241C3B;--chip-recall-fg:#CDB6FF;--chip-understand-bg:#16303C;--chip-understand-fg:#9FE0F6;--btn-sub-c:#8E9BAE;--on-ink:#090B11;--ink-hover:#FFFFFF;--a2-hover:#7FDCF7;--serif:Georgia, 'Times New Roman', serif;--sans:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;}
+  body.bright{--sand:#EAEEF4;--paper:#FFFFFF;--cut:#DFE5EE;--ink:#0E1219;--a1:#5A12E0;--a2:#0057D9;--copper:var(--a1);--malachite:var(--a2);--clay:#4B5563;--fade:#586372;--ink-c:14,18,25;--a1-c:90,18,224;--a2-c:0,87,217;--opt-correct-bg:#E2EDE4;--opt-wrong-bg:#EBE2FB;--chip-recall-bg:#EDE4FD;--chip-recall-fg:#4E0FC7;--chip-understand-bg:#DCE9FA;--chip-understand-fg:#084A9E;--btn-sub-c:#7A8598;--on-ink:#FFFFFF;--ink-hover:#0A0D12;--a2-hover:#0043A8;}
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     min-height: 100vh;
@@ -90,7 +90,7 @@
   .secondary-btn { padding: 0.8rem 1.2rem; background: transparent; border: 1px solid rgba(var(--ink-c),0.28); color: var(--ink); font-family: inherit; font-size: 0.92rem; font-weight: 600; cursor: pointer; }
   .secondary-btn:hover:not(:disabled) { background: var(--paper); }
   .secondary-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-  .primary-btn-small { padding: 0.85rem 1.5rem; background: var(--malachite); border: none; color: #F7F1E4; font-family: inherit; font-size: 0.95rem; cursor: pointer; font-weight: 700; }
+  .primary-btn-small { padding: 0.85rem 1.5rem; background: var(--malachite); border: none; color: #F7F9FC; font-family: inherit; font-size: 0.95rem; cursor: pointer; font-weight: 700; }
   .primary-btn-small:hover:not(:disabled) { background: var(--a2-hover); }
   .primary-btn-small:disabled { opacity: 0.35; cursor: not-allowed; }
   .quiz-foot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
@@ -126,7 +126,7 @@
   .hidden { display: none !important; }
 
 body { padding-bottom: 5.25rem !important; } #kula-mode-toggle, .mode-toggle { min-height: 44px !important; padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; box-sizing: border-box !important; } /* kula: mobile tap targets. Every control a learner is expected to tap reaches 44px on the short axis at 360px. */ .evtoggle, .term-btn, .toggle-btn, #skip-btn, #chk, #cont, summary, details > summary { min-height: 44px !important; display: flex !important; align-items: center !important; box-sizing: border-box !important; } summary, details > summary { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; } #next-btn, #finish-btn, #cap-advance, #kdone-btn, #kretake-btn, #cont, #chk, #begin-btn, #back-btn, #redo-btn, #restart-btn, #skip-btn, .btn-primary, .btn-secondary, .btn-small { position: relative; z-index: 10000; }
-body.bright .section-btn, body.bright .section-btn .section-name, body.bright .section-name, body.bright .section-btn .section-count { color: #12150f !important; }
+body.bright .section-btn, body.bright .section-btn .section-name, body.bright .section-name, body.bright .section-btn .section-count { color: #090b11 !important; }
 
 /* kdone completion pop */
 .kdone-back { position: fixed; inset: 0; background: rgba(8,16,28,0.72); display: flex; align-items: center; justify-content: center; padding: 1.2rem; z-index: 60; }
@@ -136,8 +136,8 @@ body.bright .section-btn, body.bright .section-btn .section-name, body.bright .s
 .kdone .primary-btn { display: inline-flex; width: auto; }
 </style>
 <style>/* kula: contrast corrections. Measured on the painted result in both modes, on every surface the control appears on. Colour only. */
-body:not(.bright) #action-btn { background-color: #2E7171 !important; }
-body.bright #exit-btn { color: #656459 !important; }
+body:not(.bright) #action-btn { background-color: #0A62E0 !important; }
+body.bright #exit-btn { color: #586372 !important; }
 </style>
 </head>
 <body class="bright">
@@ -272,7 +272,7 @@ const QUESTIONS = [
       "That the Buddhist majority had already backed him"
     ],
     "correct": 0,
-    "explanation": "That it could not have survived a vote. You are reading backwards from an action to what it reveals, which is the move the essay wants. A government that needs the election cancelled is not resting on the people’s agreement."
+    "explanation": "That it could not have survived a vote. You are reading backwards from an action to what it reveals, which is the move the essay wants. A government that has to cancel an election does not have the people behind it."
   },
   {
     "id": 4,
@@ -452,7 +452,7 @@ const QUESTIONS = [
       "1975"
     ],
     "correct": 0,
-    "explanation": "November 1969, in the speech to what he called the silent majority. He promised to wind the war down, and then the bombing spread instead. You can set his words against what happened next."
+    "explanation": "November 1969, in the speech to what he called the silent majority. He promised to bring the war to an end, and then the bombing spread instead. You can set his words against what happened next."
   },
   {
     "id": 16,
@@ -467,7 +467,7 @@ const QUESTIONS = [
       "A ceasefire to be declared by both sides"
     ],
     "correct": 0,
-    "explanation": "The North's army stayed exactly where it was inside South Vietnam. That is the flaw in the agreement, and it explains 1975 better than anything else. An agreement that lets one side stay is not a settlement."
+    "explanation": "The North's army stayed exactly where it was inside South Vietnam. That is the flaw in the agreement, and it explains 1975 better than anything else. The agreement let one side keep its army in place, so it settled nothing."
   },
   {
     "id": 17,
@@ -497,7 +497,7 @@ const QUESTIONS = [
       "It gave the president wider powers over the armed forces"
     ],
     "correct": 0,
-    "explanation": "It changed how America goes to war, and it outlasted the mood that produced it. Opinion swings back. A law stays on the books. That is why it is the strongest evidence of political change."
+    "explanation": "It changed how America goes to war, and it outlasted the mood that produced it. Opinion swings back. A law stays on the books. The law stayed on the books after the mood passed. That is the strongest evidence of political change."
   }
 ];
 
